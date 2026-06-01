@@ -74,11 +74,13 @@ export function generateInsight(contacts) {
   if (overdue.length > 0) {
     const c = overdue[0]
     const d = daysSince(c.last_contact)
-    return ${c.name}${c.company ? ` at ${c.company} : ''} hasn't been contacted in ${d ?? 'many'} days — reach out today.`
+    const who = c.company ? c.name + ' at ' + c.company : c.name
+    const days = d !== null ? d + ' days' : 'many days'
+    return who + ' has not been contacted in ' + days + ' - reach out today.'
   }
   const secured = active.filter(c => getUrgency(c) === 'secured')
   if (secured.length > 0) {
-    return You have ${secured.length} referral${secured.length !== 1 ? 's' : ''} secured. Keep nurturing your network!
+    return 'You have ' + secured.length + ' referral' + (secured.length !== 1 ? 's' : '') + ' secured. Keep nurturing your network!'
   }
   return 'All active contacts are on track. Keep building relationships!'
 }
@@ -93,5 +95,5 @@ export function daysAgoLabel(dateStr) {
   if (d === null) return null
   if (d === 0) return 'Today'
   if (d === 1) return '1 day ago'
-  return ${d} days ago
+  return d + ' days ago'
 }
