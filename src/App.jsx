@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, NavLink } from 'react-router-dom'
+import { Routes, Route, NavLink } from 'react-router-dom'
 import ReferralPage from './pages/ReferralPage.jsx'
 import CompaniesPage from './pages/CompaniesPage.jsx'
 import LeadsPage from './pages/LeadsPage.jsx'
@@ -29,18 +29,16 @@ function Sidebar() {
 
 export default function App() {
   return (
-    <HashRouter>
-      <div className="app">
-        <Sidebar />
-        <main className="main">
-          <Routes>
-            <Route path="/" element={<ReferralPage />} />
-            <Route path="/leads" element={<LeadsPage />} />
-            <Route path="/target-companies" element={<TargetCompaniesPage />} />
-            <Route path="/companies" element={<CompaniesPage />} />
-          </Routes>
-        </main>
-      </div>
-    </HashRouter>
+    <div className="app">
+      <Sidebar />
+      <main className="main">
+        <Routes>
+          <Route path="/" element={<ReferralPage />} />
+          <Route path="/leads" element={<LeadsPage />} />
+          <Route path="/target-companies" element={<TargetCompaniesPage />} />
+          <Route path="/companies" element={<CompaniesPage />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
