@@ -12,20 +12,16 @@ function Sidebar() {
         <span>2026 MBA Search</span>
       </div>
       <NavLink to="/" end className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
-        <i className="ti ti-users" />
-        Referral details
+        <i className="ti ti-users" /> Referral details
       </NavLink>
       <NavLink to="/leads" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
-        <i className="ti ti-user-search" />
-        Leads
+        <i className="ti ti-user-search" /> Leads
       </NavLink>
       <NavLink to="/target-companies" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
-        <i className="ti ti-target" />
-        Target companies
+        <i className="ti ti-target" /> Target companies
       </NavLink>
       <NavLink to="/companies" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
-        <i className="ti ti-building" />
-        Companies + refs
+        <i className="ti ti-building" /> Companies + refs
       </NavLink>
     </nav>
   )
