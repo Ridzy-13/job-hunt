@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
+import { HashRouter, Routes, Route, NavLink } from 'react-router-dom'
 import ReferralPage from './pages/ReferralPage.jsx'
 import CompaniesPage from './pages/CompaniesPage.jsx'
 import LeadsPage from './pages/LeadsPage.jsx'
@@ -29,7 +29,7 @@ function Sidebar() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app">
         <Sidebar />
         <main className="main">
@@ -41,6 +41,6 @@ export default function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
