@@ -8,7 +8,7 @@ function Sidebar() {
   return (
     <nav className="sidebar">
       <div className="sidebar-logo">
-        Jay's Job Hunt
+        Ridhima's Job Hunt
         <span>2026 MBA Search</span>
       </div>
       <NavLink to="/" end className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>
